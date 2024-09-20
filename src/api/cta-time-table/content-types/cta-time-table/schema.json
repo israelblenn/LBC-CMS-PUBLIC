@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "cta_time_tables",
+  "info": {
+    "singularName": "cta-time-table",
+    "pluralName": "cta-time-tables",
+    "displayName": "CTA Time Table"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
