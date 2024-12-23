@@ -12,14 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "recording": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "audios"
-      ]
-    },
     "title": {
       "type": "string",
       "required": true
@@ -50,6 +42,9 @@
       "relation": "manyToOne",
       "target": "api::speaker.speaker",
       "inversedBy": "sermons"
+    },
+    "recording": {
+      "type": "string"
     }
   }
 }

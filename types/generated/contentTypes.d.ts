@@ -911,7 +911,6 @@ export interface ApiSermonSermon extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    recording: Attribute.Media<'audios'> & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     scripture: Attribute.String;
     date: Attribute.Date & Attribute.Required;
@@ -926,6 +925,7 @@ export interface ApiSermonSermon extends Schema.CollectionType {
       'manyToOne',
       'api::speaker.speaker'
     >;
+    recording: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
