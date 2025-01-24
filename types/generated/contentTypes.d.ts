@@ -861,6 +861,40 @@ export interface ApiNetworkNetwork extends Schema.CollectionType {
   };
 }
 
+export interface ApiProgramProgram extends Schema.CollectionType {
+  collectionName: 'programs';
+  info: {
+    singularName: 'program';
+    pluralName: 'programs';
+    displayName: 'Program';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    column: Attribute.Enumeration<['COLUMN_1', 'COLUMN_2']> &
+      Attribute.Required;
+    description: Attribute.Blocks & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::program.program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::program.program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSeriesSeries extends Schema.CollectionType {
   collectionName: 'seriesp';
   info: {
@@ -1034,6 +1068,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::cta-time-table.cta-time-table': ApiCtaTimeTableCtaTimeTable;
       'api::network.network': ApiNetworkNetwork;
+      'api::program.program': ApiProgramProgram;
       'api::series.series': ApiSeriesSeries;
       'api::sermon.sermon': ApiSermonSermon;
       'api::speaker.speaker': ApiSpeakerSpeaker;
