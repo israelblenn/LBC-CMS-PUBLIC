@@ -10,9 +10,4 @@ module.exports = ({ env }) => ({
       salt: env('TRANSFER_TOKEN_SALT'),
     },
   },
-  config: {
-  features: {
-    contentTypesBuilder: true,
-  },
-}
 });
