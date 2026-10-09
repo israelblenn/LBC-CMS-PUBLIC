@@ -993,6 +993,7 @@ export interface ApiSermonSermon extends Schema.CollectionType {
       'api::speaker.speaker'
     >;
     recording: Attribute.String;
+    video: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

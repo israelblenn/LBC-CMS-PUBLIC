@@ -45,6 +45,9 @@
     },
     "recording": {
       "type": "string"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }
